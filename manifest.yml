@@ -1,0 +1,12 @@
+---
+applications:
+- name: appd-java-sample-app
+  instances: 1
+  timeout: 180
+  host: appd-java-sample-app
+  path: ./target/appd-java-sample-app-0.0.1-SNAPSHOT.jar
+  memory: 1G
+  disk_quota: 2G
+  buildpack: https://github.com/dtran808/java-buildpack.git
+  services:
+  - appdynamics
